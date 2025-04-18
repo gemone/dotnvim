@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- Customize Mason
 
 ---@type LazySpec
@@ -12,13 +10,23 @@ return {
       -- Make sure to use the names found in `:Mason`
       ensure_installed = {
         -- install language servers
-        "lua-language-server",
+        "lua-language-server", -- for lua
+        "vue-language-server", -- for vue
+        "gopls", -- for go
+        "clangd", -- c/c++
+        "rust-analyzer", -- for rust
+        "ruff", -- for python
 
         -- install formatters
         "stylua",
+        "prettierd",
+        "eslint_d",
 
         -- install debuggers
         "debugpy",
+        "codelldb",
+        "delve",
+        "vscode-java-decompiler",
 
         -- install any other package
         "tree-sitter-cli",
