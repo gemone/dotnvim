@@ -27,12 +27,6 @@ if utils.which "curl" then
   table.insert(config, { import = "astrocommunity.programming-language-support.rest-nvim" })
 end
 
--- for git
-if utils.which "git" then
-  table.insert(config, { import = "astrocommunity.git.neogit" })
-  table.insert(config, { import = "astrocommunity.git.git-blame-nvim" })
-end
-
 -- for web
 if utils.which "node" then
   table.insert(config, { import = "astrocommunity.pack.angular" })
@@ -56,6 +50,7 @@ if utils.which "go" then
   table.insert(config, { import = "astrocommunity.pack.sql" })
 end
 if utils.which "zig" then table.insert(config, { import = "astrocommunity.pack.zig" }) end
+if utils.which "python" then table.insert(config, { import = "astrocommunity.pack.python-ruff" }) end
 
 -- import/override with your plugins folder
 
