@@ -22,7 +22,7 @@ local config = {
 }
 
 -- for curl
-if utils.which "curl" then
+if utils.which "curl" and string.lower(vim.uv.os_uname().sysname) ~= "windows_nt" then
   -- https://github.com/rest-nvim/rest.nvim
   table.insert(config, { import = "astrocommunity.programming-language-support.rest-nvim" })
 end
@@ -33,9 +33,6 @@ if utils.which "node" then
   table.insert(config, { import = "astrocommunity.pack.typescript" })
   table.insert(config, { import = "astrocommunity.pack.vue" })
 end
-
--- for powershell
-if utils.which "pwsh" then table.insert(config, { import = "astrocommunity.pack.ps1" }) end
 
 -- for language
 if utils.which "rustc" then table.insert(config, { import = "astrocommunity.pack.rust" }) end

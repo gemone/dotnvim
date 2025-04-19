@@ -1,7 +1,7 @@
 local M = {}
 
 local which_command = {
-  ["windows_nt"] = "where",
+  ["windows_nt"] = "where.exe",
   ["linux"] = "which",
   ["darwin"] = "which",
 }
